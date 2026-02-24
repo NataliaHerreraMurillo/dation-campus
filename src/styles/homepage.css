@@ -1,0 +1,430 @@
+/* ============================================
+   HOMEPAGE SPECIFIC STYLES
+   ============================================ */
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-bg-white) 0%, #f8f9fa 100%);
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+}
+
+.hero__content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero__title {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero__title .accent {
+    color: var(--color-text-accent);
+}
+
+.hero__subtitle {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-light);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.hero__illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__illustration svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================================
+   INTRO SECTION ("L'altra metà della mela")
+   ======================================== */
+
+.intro-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-bg-white);
+    text-align: center;
+}
+
+.intro-section__title {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.intro-section__text {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+    font-size: var(--font-size-body);
+}
+
+.intro-section__illustration {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+}
+
+/* ========================================
+   TAILOR-MADE SECTION ("Su misura, sempre")
+   ======================================== */
+
+.tailor-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-primary-red);
+    position: relative;
+}
+
+.tailor-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: var(--color-primary-navy);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 95% 100%, 90% 50%, 85% 100%, 80% 50%, 75% 100%, 70% 50%, 65% 100%, 60% 50%, 55% 100%, 50% 50%, 45% 100%, 40% 50%, 35% 100%, 30% 50%, 25% 100%, 20% 50%, 15% 100%, 10% 50%, 5% 100%, 0 50%);
+}
+
+.tailor-section__container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.tailor-section__content {
+    flex: 1;
+    color: var(--color-text-light);
+}
+
+.tailor-section__title {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-md);
+}
+
+.tailor-section__title .dark {
+    color: var(--color-primary-navy);
+}
+
+.tailor-section__text {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-relaxed);
+}
+
+.tailor-section__illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* ========================================
+   PROCESS STEPS
+   ======================================== */
+
+.process-step {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.process-step--alt {
+    background: #f8f9fa;
+}
+
+.process-step--gradient {
+    background: linear-gradient(180deg, #1a2a3a 0%, #2d4a5a 100%);
+    color: var(--color-text-light);
+}
+
+.process-step--gradient .process-step__title {
+    color: var(--color-text-light);
+}
+
+.process-step__container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.process-step__container--reverse {
+    flex-direction: row-reverse;
+}
+
+.process-step__content {
+    flex: 1;
+}
+
+.process-step__number {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-accent);
+    margin-bottom: var(--spacing-sm);
+}
+
+.process-step__title {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.process-step__title .accent {
+    color: var(--color-text-accent);
+}
+
+.process-step__text {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-md);
+}
+
+.process-step__illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+
+.cta-section {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    background: var(--color-bg-white);
+    position: relative;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 2px solid rgba(45, 74, 90, 0.2);
+    pointer-events: none;
+    box-shadow: 0 0 30px rgba(45, 74, 90, 0.1);
+}
+
+.cta-section__title {
+    font-size: var(--font-size-h2);
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-section__text {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-md);
+    font-size: var(--font-size-body);
+}
+
+/* ========================================
+   ENHANCED FOOTER
+   ======================================== */
+
+.footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.footer__container {
+    text-align: center;
+}
+
+.footer__logo {
+    font-size: 36px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-light);
+    text-decoration: none;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.footer__info {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-nav);
+    line-height: 1.8;
+}
+
+.footer__info p {
+    margin-bottom: 0.5em;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.footer__social-link:hover {
+    color: var(--color-text-accent);
+}
+
+.footer__social-link svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.footer__links {
+    font-size: var(--font-size-small);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer__links a:hover {
+    color: var(--color-text-accent);
+}
+
+/* ========================================
+   PLACEHOLDER ILLUSTRATION STYLES
+   ======================================== */
+
+.illustration-placeholder {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--color-primary-navy) 0%, #2d4a5a 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.illustration-placeholder::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--color-primary-red);
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.illustration-placeholder::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    bottom: 30%;
+    right: 25%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Additional floating elements */
+.illustration-placeholder .planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.illustration-placeholder .planet--1 {
+    width: 40px;
+    height: 40px;
+    background: #4a90d9;
+    top: 60%;
+    left: 50%;
+    animation: float 7s ease-in-out infinite;
+}
+
+.illustration-placeholder .planet--2 {
+    width: 25px;
+    height: 25px;
+    background: #f9d56e;
+    top: 15%;
+    right: 30%;
+    animation: float 5s ease-in-out infinite 0.5s;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 992px) {
+
+    .hero__container,
+    .tailor-section__container,
+    .process-step__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .process-step__container--reverse {
+        flex-direction: column;
+    }
+
+    .hero__content,
+    .tailor-section__content,
+    .process-step__content {
+        max-width: 100%;
+    }
+
+    .hero__illustration,
+    .tailor-section__illustration,
+    .process-step__illustration {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .illustration-placeholder {
+        max-width: 300px;
+    }
+
+    .cta-section::before {
+        inset: 10px;
+    }
+}

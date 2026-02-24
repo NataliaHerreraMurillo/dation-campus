@@ -1,0 +1,462 @@
+:root {
+  /* ========================================
+     COLORS
+     ======================================== */
+
+  /* Primary Colors */
+  --color-primary-red: #D93232;
+  --color-primary-red-hover: #DA2222;
+  --color-primary-navy: #111D24;
+
+  /* Background Colors */
+  --color-bg-white: #FFFFFF;
+  --color-bg-dark: #111D24;
+
+  /* Text Colors */
+  --color-text-primary: #111D24;
+  --color-text-muted: rgba(0, 0, 0, 0.65);
+  --color-text-light: #FFFFFF;
+  --color-text-accent: #D93232;
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+
+  /* Font Family */
+  --font-family: 'Barlow Condensed', sans-serif;
+
+  /* Font Sizes */
+  --font-size-h1: 72px;
+  --font-size-h2: 64px;
+  --font-size-h3: 48px;
+  --font-size-h4: 36px;
+  --font-size-body: 25.5px;
+  --font-size-body-sm: 20px;
+  --font-size-nav: 18px;
+  --font-size-small: 14px;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 0.94;
+  --line-height-normal: 1.2;
+  --line-height-relaxed: 1.76;
+
+  /* ========================================
+     SPACING
+     ======================================== */
+
+  --spacing-xs: 11.25px;
+  --spacing-sm: 20px;
+  --spacing-md: 45px;
+  --spacing-lg: 90px;
+  --spacing-xl: 120px;
+
+  /* ========================================
+     LAYOUT
+     ======================================== */
+
+  --header-height: 67.5px;
+  --container-max-width: 1400px;
+  --container-padding: 40px;
+
+  /* ========================================
+     TRANSITIONS
+     ======================================== */
+
+  --transition-fast: all 0.2s ease;
+  --transition-base: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+
+  /* ========================================
+     BORDERS
+     ======================================== */
+
+  --border-radius: 0px;
+  /* Sharp corners - key design feature */
+}
+
+/* ============================================
+   CSS RESET & BASE STYLES
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-light);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-medium);
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--color-text-accent);
+  text-decoration: underline;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-primary-red-hover);
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section {
+  padding: var(--spacing-lg) 0;
+}
+
+/* ============================================
+   BUTTON COMPONENTS
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.btn-primary {
+  background-color: var(--color-primary-red);
+  color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-red-hover);
+  color: var(--color-text-light);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary-red);
+  border: 2px solid var(--color-primary-red);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary-red);
+  color: var(--color-text-light);
+}
+
+/* ============================================
+   HEADER COMPONENT
+   ============================================ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--color-bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xs) var(--container-padding);
+  z-index: 1000;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.header__nav-link {
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: var(--transition-base);
+}
+
+.header__nav-link:hover {
+  color: var(--color-text-accent);
+}
+
+.header__nav-link--active,
+.header__nav-link.active {
+  color: var(--color-text-accent);
+}
+
+/* Hamburger Menu Button */
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--color-text-primary);
+  transition: var(--transition-base);
+}
+
+.header__hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================
+   FOOTER COMPONENT
+   ============================================ */
+
+.footer {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.footer__container {
+  text-align: center;
+}
+
+.footer__logo {
+  font-size: 36px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-light);
+  text-decoration: none;
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+.footer__info {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-nav);
+  line-height: 1.8;
+}
+
+.footer__info p {
+  margin-bottom: 0.5em;
+}
+
+.footer a {
+  color: var(--color-text-accent);
+}
+
+.footer a:hover {
+  color: var(--color-primary-red-hover);
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.footer__social-link:hover {
+  color: var(--color-text-accent);
+}
+
+.footer__social-link svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.footer__links {
+  font-size: var(--font-size-small);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer__links a:hover {
+  color: var(--color-text-accent);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--header-height);
+}
+
+.hero__content {
+  max-width: 800px;
+}
+
+.hero__title {
+  margin-bottom: var(--spacing-md);
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-body);
+  margin-bottom: var(--spacing-md);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (max-width: 1200px) {
+  :root {
+    --font-size-h1: 56px;
+    --font-size-h2: 48px;
+    --font-size-h3: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 42px;
+    --font-size-h2: 36px;
+    --font-size-h3: 28px;
+    --font-size-body: 20px;
+    --container-padding: 20px;
+    --spacing-lg: 60px;
+  }
+
+  .header {
+    padding: var(--spacing-xs) 20px;
+  }
+
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--color-bg-white);
+    flex-direction: column;
+    padding: var(--spacing-sm);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .header__nav.open {
+    display: flex;
+  }
+
+  .header__nav-link {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .header__hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 24px;
+    --font-size-body: 18px;
+  }
+}
