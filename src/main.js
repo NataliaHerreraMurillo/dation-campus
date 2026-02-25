@@ -1,5 +1,6 @@
 import './styles/index.css'
 import './styles/homepage.css'
+import heroImage from './assets/teacherstudents.png'
 
 // Dation Campus Website
 // Main JavaScript Entry Point — Homepage
@@ -53,10 +54,7 @@ function renderHomePage() {
           <a href="#beneficios" class="btn btn-primary">DESCUBRE MÁS</a>
         </div>
         <div class="hero__illustration">
-          <div class="illustration-placeholder">
-            <div class="planet planet--1"></div>
-            <div class="planet planet--2"></div>
-          </div>
+          <img src="${heroImage}" alt="Profesor y estudiantes aprendiendo inteligencia artificial" class="hero__image" />
         </div>
       </div>
     </section>

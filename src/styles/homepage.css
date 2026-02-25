@@ -47,7 +47,7 @@
 }
 
 .hero__illustration {
-    flex: 1;
+    flex: 1.4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +56,14 @@
 .hero__illustration svg {
     max-width: 100%;
     height: auto;
+}
+
+.hero__image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
 }
 
 /* ========================================
