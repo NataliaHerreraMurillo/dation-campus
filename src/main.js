@@ -27,6 +27,7 @@ function renderHomePage() {
     <header class="header">
       <a href="${BASE}" class="header__logo">Dation Campus</a>
       <nav class="header__nav" id="mainNav">
+        <a href="${BASE}" class="header__nav-link active">Home</a>
         <a href="${BASE}team.html" class="header__nav-link">Equipo</a>
         <a href="${BASE}cursos.html" class="header__nav-link">Cursos</a>
         <a href="${BASE}contact.html" class="header__nav-link">Contacto</a>

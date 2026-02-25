@@ -5,7 +5,7 @@ Static multi-page website built with Vite as the dev server and bundler.
 
 ## Page Architecture
 - **`index.html`**: Vite entry point. Content is rendered dynamically via `src/main.js` (SPA pattern).
-- **Other pages** (`about.html`, `team.html`, `cursos.html`, `contact.html`): Static HTML files that link CSS directly via `<link>` tags. These are configured as additional entries in `vite.config.js`.
+- **Other pages** (`team.html`, `cursos.html`, `contact.html`): Static HTML files that link CSS directly via `<link>` tags. These are configured as additional entries in `vite.config.js`.
 
 ## CSS Architecture
 Three-layer CSS system:
@@ -21,6 +21,6 @@ Three-layer CSS system:
 
 ## Navigation
 ```
-Header: [Logo] ── Nosotros | Equipo | Cursos | Contacto
+Header: [Logo] ── Home | Equipo | Cursos | Contacto
 ```
 All nav links point to respective `.html` files. Active state via `.active` class.

@@ -13,7 +13,6 @@ Sitio web estático para la venta de cursos de IA orientados a estudiantes de ba
 | Página          | Archivo          | Descripción                                          |
 |-----------------|------------------|------------------------------------------------------|
 | Inicio          | `index.html`     | Hero, propuesta de valor, resumen de cursos, CTA     |
-| Nosotros        | `about.html`     | Misión, pilares, estadísticas                        |
 | Equipo          | `team.html`      | Miembros del equipo con filtro y modal               |
 | Cursos          | `cursos.html`    | Listado de cursos con detalles placeholder           |
 | Contacto        | `contact.html`   | Info de contacto + formulario de captura de datos    |

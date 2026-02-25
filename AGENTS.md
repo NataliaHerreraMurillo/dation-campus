@@ -13,7 +13,6 @@ Static website for **Dation Campus**, an AI courses company targeting high schoo
 │   └── product-specs/
 │       └── index.md         ← Pages, features, form specs
 ├── index.html               ← Homepage (Vite entry point, SPA)
-├── about.html               ← About page (static HTML)
 ├── team.html                ← Team page (static HTML)
 ├── cursos.html              ← Courses page (static HTML)
 ├── contact.html             ← Contact page with lead form (static HTML)
