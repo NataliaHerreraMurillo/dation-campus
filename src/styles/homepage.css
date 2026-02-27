@@ -103,6 +103,9 @@
 .process-step {
     padding: var(--spacing-xl) 0;
     position: relative;
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
 }
 
 .process-step--alt {
