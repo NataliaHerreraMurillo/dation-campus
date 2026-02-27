@@ -1,6 +1,7 @@
 import './styles/index.css'
 import './styles/homepage.css'
 import heroImage from './assets/teacherstudents.png'
+import studentsPresentingImage from './assets/studentspresenting.png'
 
 // Dation Campus Website
 // Main JavaScript Entry Point — Homepage
@@ -73,33 +74,7 @@ function renderHomePage() {
         </p>
         <a href="#habilidades" class="btn btn-primary">¡EMPECEMOS!</a>
         <div class="intro-section__illustration">
-          <div class="illustration-placeholder" style="max-width: 400px; aspect-ratio: 16/9;">
-            <div class="planet planet--1"></div>
-            <div class="planet planet--2"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Value Proposition Section -->
-    <section class="tailor-section">
-      <div class="container tailor-section__container">
-        <div class="tailor-section__illustration">
-          <div class="illustration-placeholder" style="background: rgba(0,0,0,0.2);">
-            <div class="planet planet--1"></div>
-            <div class="planet planet--2"></div>
-          </div>
-        </div>
-        <div class="tailor-section__content">
-          <h2 class="tailor-section__title">
-            Educación <span class="dark">a tu medida</span>
-          </h2>
-          <p class="tailor-section__text">
-            Nuestros cursos están diseñados específicamente para 
-            estudiantes que se preparan para la universidad. Cada 
-            módulo combina teoría y práctica con herramientas de IA 
-            que se integran en tu vida académica diaria.
-          </p>
+          <img src="${studentsPresentingImage}" alt="Estudiantes presentando" class="hero__image" style="max-width: 650px;" />
         </div>
       </div>
     </section>
@@ -117,7 +92,7 @@ function renderHomePage() {
             resúmenes inteligentes, investigación acelerada, 
             redacción asistida y comprensión profunda de temas complejos.
           </p>
-          <a href="${BASE}cursos.html" class="btn btn-primary">VER CURSOS</a>
+          <a href="#paso2" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
           <div class="illustration-placeholder">
@@ -128,7 +103,7 @@ function renderHomePage() {
       </div>
     </section>
     
-    <section class="process-step process-step--gradient">
+    <section id="paso2" class="process-step process-step--gradient">
       <div class="container process-step__container process-step__container--reverse">
         <div class="process-step__content">
           <span class="process-step__number">02</span>
@@ -140,7 +115,7 @@ function renderHomePage() {
             universitario, identificar tus fortalezas y establecer 
             objetivos claros y alcanzables.
           </p>
-          <a href="${BASE}cursos.html" class="btn btn-primary">EXPLORAR</a>
+          <a href="#paso3" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
           <div class="illustration-placeholder" style="background: rgba(255,255,255,0.1);">
@@ -151,7 +126,7 @@ function renderHomePage() {
       </div>
     </section>
     
-    <section class="process-step process-step--alt">
+    <section id="paso3" class="process-step process-step--alt">
       <div class="container process-step__container">
         <div class="process-step__content">
           <span class="process-step__number">03</span>
@@ -163,7 +138,7 @@ function renderHomePage() {
             a automatizar procesos académicos y libera tu tiempo 
             para lo que realmente importa.
           </p>
-          <a href="${BASE}cursos.html" class="btn btn-primary">DESCUBRIR</a>
+          <a href="#paso4" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
           <div class="illustration-placeholder">
@@ -174,7 +149,7 @@ function renderHomePage() {
       </div>
     </section>
     
-    <section class="process-step">
+    <section id="paso4" class="process-step">
       <div class="container process-step__container process-step__container--reverse">
         <div class="process-step__content">
           <span class="process-step__number">04</span>
@@ -186,7 +161,7 @@ function renderHomePage() {
             interpretación y presentación de información de manera 
             clara y profesional.
           </p>
-          <a href="${BASE}cursos.html" class="btn btn-outline">VER DETALLES</a>
+          <a href="#paso5" class="btn btn-outline">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
           <div class="illustration-placeholder">
@@ -197,7 +172,7 @@ function renderHomePage() {
       </div>
     </section>
     
-    <section class="process-step process-step--alt">
+    <section id="paso5" class="process-step process-step--alt">
       <div class="container process-step__container">
         <div class="process-step__content">
           <span class="process-step__number">05</span>
