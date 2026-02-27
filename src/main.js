@@ -48,8 +48,8 @@ function renderHomePage() {
             con inteligencia artificial
           </h1>
           <p class="hero__subtitle">
-            Cursos diseñados para estudiantes de bachillerato que quieren 
-            dominar las herramientas de IA y llegar a la universidad con 
+            Cursos diseñados para estudiantes de bachillerato: domina 
+            las herramientas de IA y llega a la universidad con 
             una ventaja real en productividad y aprendizaje.
           </p>
           <a href="#beneficios" class="btn btn-primary">DESCUBRE MÁS</a>
@@ -184,7 +184,7 @@ function renderHomePage() {
             que puedes integrar en tu vida diaria universitaria: 
             desde organizadores hasta herramientas de estudio personalizadas.
           </p>
-          <a href="${BASE}cursos.html" class="btn btn-primary">¡INSCRÍBETE!</a>
+          <a href="${BASE}cursos.html" class="btn btn-primary">VER CURSOS</a>
         </div>
         <div class="process-step__illustration">
           <div class="illustration-placeholder">
@@ -200,9 +200,9 @@ function renderHomePage() {
       <div class="container">
         <h2 class="cta-section__title">¿Listo para comenzar?</h2>
         <p class="cta-section__text">
-          Prepara a tu hijo para el futuro. Solicita información 
+          Potencia tu futuro universitario: solicita información 
           sobre nuestros cursos y descubre cómo la IA puede 
-          transformar su experiencia universitaria.
+          transformar tu experiencia en la universidad.
         </p>
         <a href="${BASE}contact.html" class="btn btn-primary">SOLICITAR INFORMACIÓN</a>
       </div>
