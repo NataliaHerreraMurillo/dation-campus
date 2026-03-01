@@ -95,7 +95,7 @@ function renderHomePage() {
           <a href="#paso2" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
-          <div class="icon-placeholder bg-blue">
+          <div class="icon-placeholder bg-gray">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
               <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
@@ -105,7 +105,7 @@ function renderHomePage() {
       </div>
     </section>
     
-    <section id="paso2" class="process-step process-step--gradient">
+    <section id="paso2" class="process-step">
       <div class="container process-step__container process-step__container--reverse">
         <div class="process-step__content">
           <span class="process-step__number">02</span>
@@ -120,7 +120,7 @@ function renderHomePage() {
           <a href="#paso3" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
-          <div class="icon-placeholder bg-red">
+          <div class="icon-placeholder bg-gray">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
               <circle cx="12" cy="12" r="6"/>
@@ -131,7 +131,7 @@ function renderHomePage() {
       </div>
     </section>
     
-    <section id="paso3" class="process-step process-step--alt">
+    <section id="paso3" class="process-step">
       <div class="container process-step__container">
         <div class="process-step__content">
           <span class="process-step__number">03</span>
@@ -172,10 +172,10 @@ function renderHomePage() {
             interpretación y presentación de información de manera 
             clara y profesional.
           </p>
-          <a href="#paso5" class="btn btn-outline">SIGUIENTE</a>
+          <a href="#paso5" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
-          <div class="icon-placeholder bg-blue">
+          <div class="icon-placeholder bg-gray">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 3v18h18"/>
               <path d="M18 17V9"/>
@@ -199,10 +199,13 @@ function renderHomePage() {
             que puedas integrar en tu vida diaria universitaria: 
             desde organizadores hasta herramientas de estudio personalizadas.
           </p>
-          <a href="${BASE}cursos.html" class="btn btn-primary">VER CURSOS</a>
+          <a href="${BASE}cursos.html" class="btn btn-cta-courses">
+            EXPLORAR CURSOS
+            <svg class="btn-cta-courses__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
         </div>
         <div class="process-step__illustration">
-          <div class="icon-placeholder bg-red">
+          <div class="icon-placeholder bg-gray">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
               <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd" />
               <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
@@ -211,19 +214,7 @@ function renderHomePage() {
         </div>
       </div>
     </section>
-    
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2 class="cta-section__title">¿Listo para comenzar?</h2>
-        <p class="cta-section__text">
-          Potencia tu futuro universitario: solicita información 
-          sobre nuestros cursos y descubre cómo la IA puede 
-          transformar tu experiencia en la universidad.
-        </p>
-        <a href="${BASE}contact.html" class="btn btn-primary">SOLICITAR INFORMACIÓN</a>
-      </div>
-    </section>
+
     
     <!-- Footer -->
     <footer class="footer">
