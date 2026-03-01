@@ -95,9 +95,11 @@ function renderHomePage() {
           <a href="#paso2" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
-          <div class="illustration-placeholder">
-            <div class="planet planet--1"></div>
-            <div class="planet planet--2"></div>
+          <div class="icon-placeholder bg-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -118,9 +120,12 @@ function renderHomePage() {
           <a href="#paso3" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
-          <div class="illustration-placeholder" style="background: rgba(255,255,255,0.1);">
-            <div class="planet planet--1"></div>
-            <div class="planet planet--2"></div>
+          <div class="icon-placeholder bg-red">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -141,9 +146,15 @@ function renderHomePage() {
           <a href="#paso4" class="btn btn-primary">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
-          <div class="illustration-placeholder">
-            <div class="planet planet--1"></div>
-            <div class="planet planet--2"></div>
+          <div class="icon-placeholder bg-gray">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 8V4H8"/>
+              <rect width="16" height="12" x="4" y="8" rx="2"/>
+              <path d="M2 14h2"/>
+              <path d="M20 14h2"/>
+              <path d="M15 13v2"/>
+              <path d="M9 13v2"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -164,9 +175,13 @@ function renderHomePage() {
           <a href="#paso5" class="btn btn-outline">SIGUIENTE</a>
         </div>
         <div class="process-step__illustration">
-          <div class="illustration-placeholder">
-            <div class="planet planet--1"></div>
-            <div class="planet planet--2"></div>
+          <div class="icon-placeholder bg-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/>
+              <path d="M18 17V9"/>
+              <path d="M13 17V5"/>
+              <path d="M8 17v-3"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -181,15 +196,17 @@ function renderHomePage() {
           </h2>
           <p class="process-step__text">
             Desarrolla aplicaciones simples y útiles con ayuda de IA 
-            que puedes integrar en tu vida diaria universitaria: 
+            que puedas integrar en tu vida diaria universitaria: 
             desde organizadores hasta herramientas de estudio personalizadas.
           </p>
           <a href="${BASE}cursos.html" class="btn btn-primary">VER CURSOS</a>
         </div>
         <div class="process-step__illustration">
-          <div class="illustration-placeholder">
-            <div class="planet planet--1"></div>
-            <div class="planet planet--2"></div>
+          <div class="icon-placeholder bg-red">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd" />
+              <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
+            </svg>
           </div>
         </div>
       </div>

@@ -279,77 +279,35 @@
    PLACEHOLDER ILLUSTRATION STYLES
    ======================================== */
 
-.illustration-placeholder {
+.icon-placeholder {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--color-primary-navy) 0%, #2d4a5a 100%);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    color: var(--color-text-light);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.illustration-placeholder::before {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
+.icon-placeholder svg {
+    width: 50%;
+    height: auto;
+}
+
+.bg-red {
     background: var(--color-primary-red);
-    border-radius: 50%;
-    top: 20%;
-    left: 20%;
-    animation: float 6s ease-in-out infinite;
 }
 
-.illustration-placeholder::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    bottom: 30%;
-    right: 25%;
-    animation: float 8s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(5deg);
-    }
-}
-
-/* Additional floating elements */
-.illustration-placeholder .planet {
-    position: absolute;
-    border-radius: 50%;
-}
-
-.illustration-placeholder .planet--1 {
-    width: 40px;
-    height: 40px;
+.bg-blue {
     background: #4a90d9;
-    top: 60%;
-    left: 50%;
-    animation: float 7s ease-in-out infinite;
 }
 
-.illustration-placeholder .planet--2 {
-    width: 25px;
-    height: 25px;
-    background: #f9d56e;
-    top: 15%;
-    right: 30%;
-    animation: float 5s ease-in-out infinite 0.5s;
+.bg-gray {
+    background: #2d4a5a;
 }
 
 /* ========================================
@@ -380,7 +338,7 @@
 }
 
 @media (max-width: 768px) {
-    .illustration-placeholder {
+    .icon-placeholder {
         max-width: 300px;
     }
 
