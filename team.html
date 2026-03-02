@@ -44,15 +44,6 @@
             </div>
         </section>
 
-        <!-- Team Filters -->
-        <section class="team-filters">
-            <div class="container team-filters__container">
-                <button class="team-filter active" data-filter="all">Todos</button>
-                <button class="team-filter" data-filter="instructor">Instructores</button>
-                <button class="team-filter" data-filter="soporte">Soporte</button>
-                <button class="team-filter" data-filter="direccion">Dirección</button>
-            </div>
-        </section>
 
         <!-- Team Grid -->
         <section class="team-section">
@@ -65,14 +56,8 @@
 
         <!-- Values Section -->
         <section class="values-section">
-            <div class="container values-section__container">
-                <div class="values-section__illustration">
-                    <div class="illustration-placeholder" style="max-width: 350px;">
-                        <div class="planet planet--1"></div>
-                        <div class="planet planet--2"></div>
-                    </div>
-                </div>
-                <div class="values-section__content">
+            <div class="container">
+                <div class="values-section__content values-section__content--centered">
                     <h2 class="values-section__title">
                         ¿Por qué <span class="accent">nuestro equipo</span>?
                     </h2>
@@ -140,14 +125,10 @@
     <script>
         // Team members data
         const teamMembers = [
-            { name: 'Director General', role: 'Director & Fundador', category: 'direccion', bio: 'Líder del proyecto Dation Campus con amplia experiencia en educación tecnológica y gestión de programas de formación en IA.' },
-            { name: 'Coordinadora Académica', role: 'Coordinación de Programas', category: 'direccion', bio: 'Responsable del diseño curricular y la calidad de los programas de formación. Especialista en pedagogía aplicada a la tecnología.' },
-            { name: 'Instructor de IA Generativa', role: 'Instructor Principal', category: 'instructor', bio: 'Especialista en herramientas de IA generativa como ChatGPT, Claude y Gemini. Enfoque en aplicaciones prácticas para estudiantes.' },
-            { name: 'Instructora de Productividad', role: 'Instructora', category: 'instructor', bio: 'Experta en automatización y productividad con IA. Enseña a los estudiantes a optimizar sus flujos de trabajo académico.' },
-            { name: 'Instructor de Análisis de Datos', role: 'Instructor', category: 'instructor', bio: 'Especialista en análisis de datos con IA. Enseña visualización, interpretación y presentación de información.' },
-            { name: 'Instructora de Desarrollo', role: 'Instructora', category: 'instructor', bio: 'Guía a los estudiantes en el desarrollo de aplicaciones simples con asistencia de IA para proyectos personales.' },
-            { name: 'Soporte Técnico', role: 'Asistente Técnico', category: 'soporte', bio: 'Brinda soporte técnico a los estudiantes durante los cursos, asegurando una experiencia de aprendizaje fluida.' },
-            { name: 'Atención al Cliente', role: 'Soporte al Estudiante', category: 'soporte', bio: 'Punto de contacto principal para padres y estudiantes. Resuelve dudas y guía en el proceso de inscripción.' }
+            { name: 'Dagoberto Herrera', role: 'Director & Fundador', category: 'direccion', image: './src/assets/Dagoberto.jpg', bio: 'Líder del proyecto Dation Campus con amplia experiencia en educación tecnológica y gestión de programas de formación en IA.' },
+            { name: 'Egit Musaev', role: 'Instructor', category: 'instructor', image: './src/assets/Egit.jpg', bio: 'Responsable del diseño curricular y la calidad de los programas de formación. Especialista en pedagogía aplicada a la tecnología.' },
+            { name: 'Sergio Ruiz', role: 'Instructor', category: 'instructor', image: './src/assets/Sergio.jpg', bio: 'Especialista en herramientas de IA generativa. Enfoque en aplicaciones prácticas para estudiantes y formación técnica.' },
+            { name: 'Natalia Herrera', role: 'Instructora', category: 'instructor', image: './src/assets/Natalia.png', bio: 'Experta en automatización y productividad con IA. Enseña a los estudiantes a optimizar sus flujos de trabajo académico.' }
         ];
 
         // Render team grid
@@ -159,7 +140,9 @@
 
             grid.innerHTML = filtered.map((member, i) => `
         <div class="team-card" data-index="${i}">
-          <div class="team-card__portrait"></div>
+          <div class="team-card__portrait">
+            <img src="${member.image}" alt="${member.name}" class="team-card__img">
+          </div>
           <h4 class="team-card__name">${member.name}</h4>
           <p class="team-card__role">${member.role}</p>
         </div>
@@ -187,14 +170,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderTeam();
 
-            // Filter buttons
-            document.querySelectorAll('.team-filter').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.team-filter').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    renderTeam(btn.dataset.filter);
-                });
-            });
 
             // Modal close
             document.getElementById('modalClose').addEventListener('click', closeModal);
