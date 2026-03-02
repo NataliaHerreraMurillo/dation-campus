@@ -110,72 +110,65 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Team Modal -->
-        <div class="team-modal" id="teamModal">
-            <div class="team-modal__content">
-                <button class="team-modal__close" id="modalClose">&times;</button>
-                <h3 class="team-modal__name" id="modalName"></h3>
-                <p class="team-modal__role" id="modalRole"></p>
-                <p class="team-modal__bio" id="modalBio"></p>
-            </div>
-        </div>
     </div>
 
     <script>
         // Team members data
         const teamMembers = [
-            { name: 'Dagoberto Herrera', role: 'Director & Fundador', category: 'direccion', image: './src/assets/Dagoberto.jpg', bio: 'Líder del proyecto Dation Campus con amplia experiencia en educación tecnológica y gestión de programas de formación en IA.' },
-            { name: 'Egit Musaev', role: 'Instructor', category: 'instructor', image: './src/assets/Egit.jpg', bio: 'Responsable del diseño curricular y la calidad de los programas de formación. Especialista en pedagogía aplicada a la tecnología.' },
-            { name: 'Sergio Ruiz', role: 'Instructor', category: 'instructor', image: './src/assets/Sergio.jpg', bio: 'Especialista en herramientas de IA generativa. Enfoque en aplicaciones prácticas para estudiantes y formación técnica.' },
-            { name: 'Natalia Herrera', role: 'Instructora', category: 'instructor', image: './src/assets/Natalia.png', bio: 'Experta en automatización y productividad con IA. Enseña a los estudiantes a optimizar sus flujos de trabajo académico.' }
+            {
+                name: 'Dagoberto Herrera',
+                role: 'Director & Fundador',
+                image: './src/assets/Dagoberto.jpg',
+                specialty: 'Científico de datos, docente, investigador y consultor',
+                bio: 'Cuenta con una maestría en Big Data Management & Analytics y una especialidad en minería de procesos, las cuales fueron impartidas conjuntamente por la Universidad Libre de Bruselas, la Universidad Politécnica de Cataluña y la Universidad Tecnológica de Eindhoven. Graduado como Ingeniero de Negocios y Tecnologías de la Información por el Instituto Tecnológico de Monterrey.'
+            },
+            {
+                name: 'Egit Musaev',
+                role: 'Instructor',
+                image: './src/assets/Egit.jpg',
+                specialty: 'Próximamente',
+                bio: 'Perfil en preparación.'
+            },
+            {
+                name: 'Sergio Ruiz',
+                role: 'Instructor',
+                image: './src/assets/Sergio.jpg',
+                specialty: 'Próximamente',
+                bio: 'Perfil en preparación.'
+            },
+            {
+                name: 'Natalia Herrera',
+                role: 'Instructora',
+                image: './src/assets/Natalia.png',
+                specialty: 'Próximamente',
+                bio: 'Perfil en preparación.'
+            }
         ];
 
         // Render team grid
-        function renderTeam(filter = 'all') {
+        function renderTeam() {
             const grid = document.getElementById('teamGrid');
-            const filtered = filter === 'all'
-                ? teamMembers
-                : teamMembers.filter(m => m.category === filter);
 
-            grid.innerHTML = filtered.map((member, i) => `
-        <div class="team-card" data-index="${i}">
-          <div class="team-card__portrait">
-            <img src="${member.image}" alt="${member.name}" class="team-card__img">
-          </div>
-          <h4 class="team-card__name">${member.name}</h4>
-          <p class="team-card__role">${member.role}</p>
-        </div>
-      `).join('');
-
-            // Add click handlers
-            grid.querySelectorAll('.team-card').forEach(card => {
-                card.addEventListener('click', () => openModal(filtered[card.dataset.index]));
-            });
-        }
-
-        // Modal functions
-        function openModal(member) {
-            document.getElementById('modalName').textContent = member.name;
-            document.getElementById('modalRole').textContent = member.role;
-            document.getElementById('modalBio').textContent = member.bio;
-            document.getElementById('teamModal').classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('teamModal').classList.remove('active');
+            grid.innerHTML = teamMembers.map(member => `
+                <div class="team-profile">
+                    <div class="team-profile__photo">
+                        <div class="team-card__portrait">
+                            <img src="${member.image}" alt="${member.name}" class="team-card__img">
+                        </div>
+                    </div>
+                    <div class="team-profile__info">
+                        <h3 class="team-profile__name">${member.name}</h3>
+                        <p class="team-profile__role">${member.role}</p>
+                        <p class="team-profile__specialty">${member.specialty}</p>
+                        <p class="team-profile__bio">${member.bio}</p>
+                    </div>
+                </div>
+            `).join('');
         }
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             renderTeam();
-
-
-            // Modal close
-            document.getElementById('modalClose').addEventListener('click', closeModal);
-            document.getElementById('teamModal').addEventListener('click', (e) => {
-                if (e.target === e.currentTarget) closeModal();
-            });
 
             // Mobile hamburger menu
             const hamburgerBtn = document.getElementById('hamburgerBtn');
